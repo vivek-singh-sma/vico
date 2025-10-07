@@ -23,6 +23,10 @@ import com.patrykandpatrick.vico.sample.compose.JetpackComposeBasicLineChart
 import com.patrykandpatrick.vico.sample.compose.JetpackComposeDailyDigitalMediaUse
 import com.patrykandpatrick.vico.sample.compose.JetpackComposeElectricCarSales
 import com.patrykandpatrick.vico.sample.compose.JetpackComposeGoldPrices
+import com.patrykandpatrick.vico.sample.compose.JetpackComposeHourlyBarChart
+import com.patrykandpatrick.vico.sample.compose.JetpackComposeHourlyLineChart
+import com.patrykandpatrick.vico.sample.compose.JetpackComposeMonthlyBarChart
+import com.patrykandpatrick.vico.sample.compose.JetpackComposeMonthlyLineChart
 import com.patrykandpatrick.vico.sample.compose.JetpackComposeRockMetalRatios
 import com.patrykandpatrick.vico.sample.compose.JetpackComposeTemperatureAnomalies
 import com.patrykandpatrick.vico.sample.views.ViewAITestScores
@@ -32,6 +36,10 @@ import com.patrykandpatrick.vico.sample.views.ViewBasicLineChart
 import com.patrykandpatrick.vico.sample.views.ViewDailyDigitalMediaUse
 import com.patrykandpatrick.vico.sample.views.ViewElectricCarSales
 import com.patrykandpatrick.vico.sample.views.ViewGoldPrices
+import com.patrykandpatrick.vico.sample.views.ViewHourlyBarChart
+import com.patrykandpatrick.vico.sample.views.ViewHourlyLineChart
+import com.patrykandpatrick.vico.sample.views.ViewMonthlyBarChart
+import com.patrykandpatrick.vico.sample.views.ViewMonthlyLineChart
 import com.patrykandpatrick.vico.sample.views.ViewRockMetalRatios
 import com.patrykandpatrick.vico.sample.views.ViewTemperatureAnomalies
 
@@ -49,6 +57,10 @@ actual val Charts.overridden: LinkedHashMap<UIFramework, List<Chart>>?
           { JetpackComposeElectricCarSales(it) },
           { JetpackComposeRockMetalRatios(it) },
           { JetpackComposeGoldPrices(it) },
+          { JetpackComposeHourlyBarChart(it) },
+          { JetpackComposeMonthlyBarChart(it) },
+          { JetpackComposeHourlyLineChart(it) },
+          { JetpackComposeMonthlyLineChart(it) },
         ),
       UIFramework.ComposeMultiplatform to ComposeMultiplatform,
       UIFramework.Views to
@@ -62,5 +74,9 @@ actual val Charts.overridden: LinkedHashMap<UIFramework, List<Chart>>?
           { ViewElectricCarSales(it) },
           { ViewRockMetalRatios(it) },
           { ViewGoldPrices(it) },
+          { ViewHourlyBarChart(it) },
+          { ViewMonthlyBarChart(it) },
+          { ViewHourlyLineChart(it) },
+          { ViewMonthlyLineChart(it) },
         ),
     )

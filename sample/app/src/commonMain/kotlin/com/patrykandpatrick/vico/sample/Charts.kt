@@ -26,6 +26,10 @@ import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformBasicL
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformDailyDigitalMediaUse
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformElectricCarSales
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformGoldPrices
+import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformHourlyBarChart
+import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformHourlyLineChart
+import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformMonthlyBarChart
+import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformMonthlyLineChart
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformRockMetalRatios
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformTemperatureAnomalies
 
@@ -41,6 +45,10 @@ object Charts {
       { ComposeMultiplatformElectricCarSales(it) },
       { ComposeMultiplatformRockMetalRatios(it) },
       { ComposeMultiplatformGoldPrices(it) },
+      { ComposeMultiplatformHourlyBarChart(it) },
+      { ComposeMultiplatformMonthlyBarChart(it) },
+      { ComposeMultiplatformHourlyLineChart(it) },
+      { ComposeMultiplatformMonthlyLineChart(it) },
     )
 
   fun default(
@@ -53,6 +61,10 @@ object Charts {
     electricCarSales: @Composable (Modifier) -> Unit,
     rockMetalRatios: @Composable (Modifier) -> Unit,
     goldPrices: @Composable (Modifier) -> Unit,
+    hourlyBarChart: @Composable (Modifier) -> Unit,
+    monthlyBarChart: @Composable (Modifier) -> Unit,
+    hourlyLineChart: @Composable (Modifier) -> Unit,
+    monthlyLineChart: @Composable (Modifier) -> Unit,
   ) =
     listOf(
       Chart(Details.BasicColumnChart, basicColumnChart),
@@ -64,6 +76,10 @@ object Charts {
       Chart(Details.ElectricCarSales, electricCarSales),
       Chart(Details.RockMetalRatios, rockMetalRatios),
       Chart(Details.GoldPrices, goldPrices),
+      Chart(Details.HourlyBarChart, hourlyBarChart),
+      Chart(Details.MonthlyBarChart, monthlyBarChart),
+      Chart(Details.HourlyLineChart, hourlyLineChart),
+      Chart(Details.MonthlyLineChart, monthlyLineChart),
     )
 }
 

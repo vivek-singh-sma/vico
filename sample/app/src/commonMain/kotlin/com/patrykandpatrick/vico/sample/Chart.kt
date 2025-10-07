@@ -53,6 +53,10 @@ class Chart(internal val details: Details, internal val content: @Composable (Mo
           "Nassar et al. 2022; Wang et al. 2024. Processing by Our World in\u00A0Data.",
         )
       val GoldPrices = Details("Gold prices (12/30/2024)", "Yahoo Finance n.d.")
+      val HourlyBarChart = Details("Hourly bar chart (with dynamic zoom labels)")
+      val MonthlyBarChart = Details("Monthly bar chart (with dynamic zoom labels)")
+      val HourlyLineChart = Details("Hourly line chart (with dynamic zoom labels)")
+      val MonthlyLineChart = Details("Monthly line chart (with dynamic zoom labels)")
     }
   }
 }
