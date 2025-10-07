@@ -27,6 +27,7 @@ import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformDailyD
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformElectricCarSales
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformGoldPrices
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformHourlyBarChart
+import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformMonthlyBarChart
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformRockMetalRatios
 import com.patrykandpatrick.vico.sample.multiplatform.ComposeMultiplatformTemperatureAnomalies
 
@@ -43,6 +44,7 @@ object Charts {
       { ComposeMultiplatformRockMetalRatios(it) },
       { ComposeMultiplatformGoldPrices(it) },
       { ComposeMultiplatformHourlyBarChart(it) },
+      { ComposeMultiplatformMonthlyBarChart(it) },
     )
 
   fun default(
@@ -56,6 +58,7 @@ object Charts {
     rockMetalRatios: @Composable (Modifier) -> Unit,
     goldPrices: @Composable (Modifier) -> Unit,
     hourlyBarChart: @Composable (Modifier) -> Unit,
+    monthlyBarChart: @Composable (Modifier) -> Unit,
   ) =
     listOf(
       Chart(Details.BasicColumnChart, basicColumnChart),
@@ -68,6 +71,7 @@ object Charts {
       Chart(Details.RockMetalRatios, rockMetalRatios),
       Chart(Details.GoldPrices, goldPrices),
       Chart(Details.HourlyBarChart, hourlyBarChart),
+      Chart(Details.MonthlyBarChart, monthlyBarChart),
     )
 }
 
